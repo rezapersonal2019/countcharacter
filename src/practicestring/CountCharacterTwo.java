@@ -11,6 +11,7 @@ public class CountCharacterTwo {
 		//Counter variable to store the count of vowels and consonant    
         int vCount = 0, cCount = 0;
         int scount = 0;
+        int nCount = 0;
 
         //Declare a string    
         String str;
@@ -37,12 +38,19 @@ public class CountCharacterTwo {
             {
                 //Increments the consonant counter    
                 cCount++;
-            } else {
+            } 
+            else if (ch >= '0' && ch <= '9') //  else
+            {
+                //Increments the consonant counter    
+                nCount++;
+            } 
+            else {
                 scount++;
             }
         }
-        System.out.println("Number of vowels: " + vCount);
-        System.out.println("Number of consonants: " + cCount);
+        System.out.println("Character of vowels: " + vCount);
+        System.out.println("Character of consonants: " + cCount);
+        System.out.println("Number of digits: " + nCount);
         System.out.println("Number of spaces: " + scount);
 
 	}
